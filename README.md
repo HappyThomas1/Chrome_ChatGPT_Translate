@@ -30,7 +30,7 @@
 
 5. **OpenAI APIキーの設定**: OpenAIのAPIキーも同様に環境変数に設定する必要があります。こちらは1000トークン当たり0.3円程度の費用が発生します。
 
-    - OpenAIの[公式ウェブサイト](https://beta.openai.com/signup/)でAPIキーを取得します。
+    - OpenAIの[公式ウェブサイト](https://platform.openai.com/docs/api-reference)でAPIキーを取得します。
     - 以下のコマンドをターミナルまたはコマンドプロンプトに入力して環境変数にAPIキーを設定します（`YOUR_OPENAI_API_KEY`は取得した実際のAPIキーに置き換えてください）。
 
         - Windowsの場合：
