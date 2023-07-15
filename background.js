@@ -7,13 +7,18 @@ const contextMenuItems = [
   
 contextMenuItems.forEach(item => {
     // メニューアイテムがすでに存在するかどうか確認
-    chrome.contextMenus.remove(item.id, function() {
-        // 削除した後、新たに作成
-        chrome.contextMenus.create({
-            id: item.id,
-            title: item.title,
-            contexts: ['selection'],
-        });
+    chrome.contextMenus.update(item.id, {
+        title: item.title,
+        contexts: ['selection'],
+    }, function() {
+        if (chrome.runtime.lastError) {
+            // メニューアイテムが存在しない場合、新たに作成
+            chrome.contextMenus.create({
+                id: item.id,
+                title: item.title,
+                contexts: ['selection'],
+            });
+        }
     });
 });
 
