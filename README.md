@@ -1,5 +1,6 @@
 # Web Text Translation Extension
-このChromeエクステンションは、ユーザーがウェブページ上のテキストを選択して、それを日本語に翻訳することができます。翻訳にはOpenAIのChatGPTもしくはDeepLを使用します。
+このChrome拡張機能は、ユーザーがウェブページ上のテキストを選択して、それを日本語に翻訳することができます。翻訳にはOpenAIのChatGPTもしくはDeepLを使用します。
+ウェブ上のPDFファイルについても、ChromeのPDF viewerの拡張機能を使用している場合、同様に翻訳が可能です。
 
 ## セットアップ
 ### 前提条件
