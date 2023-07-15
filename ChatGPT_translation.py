@@ -59,7 +59,7 @@ def translate_with_chatgpt(text,model):
     return translated_text
 
 def codeExplain_with_chatgpt(text,model):
-    prompt = f"""以下のコードを日本語でステップバイステップで説明してください。\n\nOriginal Code:\n{text}\n\n説明:"""
+    prompt = f"""以下のコードを日本語でステップバイステップで説明してください。HTMLで表示させることを前提とした書式で返してください。\n\nOriginal Code:\n{text}\n\n説明:"""
     data = create_chat_completion_with_retry(prompt, model, retries=3, delay=5)        
     explanation_text = data["choices"][0]["message"]["content"].strip() # type: ignore
     
