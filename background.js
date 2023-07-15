@@ -2,6 +2,7 @@
 const contextMenuItems = [
     { id: 'Translate_Text_ChatGPT', title: 'Translate by ChatGPT' },
     { id: 'Translate_Text_DEEPL', title: 'Translate by DeepL' },
+    { id: 'Explain_Code_GPT4', title: 'Code explanation' },
 ];
   
 contextMenuItems.forEach(item => {
@@ -25,7 +26,9 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         processMode = "ChatGPT";
     } else if (info.menuItemId === 'Translate_Text_DEEPL') {
         processMode = "DeepL";
-    } else {
+    } else if (info.menuItemId === 'Explain_Code_GPT4') {
+        processMode = "CodeExplain";
+    }else {
         return;
     }
     const selectedText = info.selectionText;
