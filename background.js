@@ -28,7 +28,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         processMode = "DeepL";
     } else if (info.menuItemId === 'Explain_Code_GPT4') {
         processMode = "CodeExplain";
-    }else {
+    } else {
         return;
     }
     const selectedText = info.selectionText;
