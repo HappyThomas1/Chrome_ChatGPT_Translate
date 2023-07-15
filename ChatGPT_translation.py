@@ -37,10 +37,10 @@ def process_text():
     #    return jsonify({'error': 'Invalid model name'}), 400
 
     if mode == 'ChatGPT':
-        model = "GPT-3.5-turbo"
+        model = "gpt-3.5-turbo"
         response_text = translate_with_chatgpt(text,model)
     elif mode == 'CodeExplain':
-        model = "GPT-4"
+        model = "gpt-4"
         response_text = codeExplain_with_chatgpt(text,model)
     elif mode == 'DeepL':
         response_text = translate_with_deepl(text)
